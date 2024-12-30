@@ -2,6 +2,7 @@ DST-PORT,32400,DIRECT
 
 DOMAIN-SUFFIX,v4.plex.tv
 DOMAIN-SUFFIX,plex.direct
+DOMAIN-SUFFIX,amazonaws.com
 
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,plexapp.com
