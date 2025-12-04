@@ -109,7 +109,8 @@ proxy-groups:
   - {name: 🌏 Wiki百科, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
   - {name: 🤖 Openai, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
   - {name: 🌏 Reddit, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
-  - {name: 📲 Telegram, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}  
+  - {name: 📲 Telegram, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]} 
+  - {name: 🌏 v2ex, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]} 
   - {name: 🐟 漏网之鱼, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
   - {name: 🌐 手动选择, type: select, include-all: true}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*BGP)"}
