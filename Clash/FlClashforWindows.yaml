@@ -111,7 +111,7 @@ proxy-groups:
   - {name: 🤖 Copilot, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
   - {name: 🪟 Microsoft, type: select, proxies: [直连, 🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡]}
   - {name: 🤖 Gemini, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]} 
-  - {name: 🖥 Teamviewer, type: select, proxies: [直连, 🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡]}
+  - {name: 🖥 TeamViewer, type: select, proxies: [直连, 🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡]}
   - {name: 📺 Plex, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]} 
   - {name: 🗄 Synology, type: select, proxies: [直连, 🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡]}
   - {name: 🎨 Adobe, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]} 
@@ -147,7 +147,7 @@ rules:
   - RULE-SET,Copilot,🤖 Copilot
   - RULE-SET,Microsoft,🪟 Microsoft
   - RULE-SET,Gemini,🤖 Gemini
-  - RULE-SET,Teamviewer,🖥 Teamviewer
+  - RULE-SET,TeamViewer,🖥 TeamViewer
   - RULE-SET,Plex,📺 Plex
   - RULE-SET,v4.Plex,直连
   - RULE-SET,Synology,🗄 Synology
@@ -195,7 +195,7 @@ rule-providers:
   Copilot: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Copilot/Copilot.list"}
   Microsoft: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.mrs"}
   Gemini: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/Gemini/Gemini.list"}
-  Teamviewer: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/teamviewer.mrs"}
+  TeamViewer: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/teamviewer.mrs"}
   Plex: { <<: *class, url: "https://raw.githubusercontent.com/whm188400131/VPN/main/Clash/Plex.list"}
   v4.Plex: { <<: *class, url: "https://raw.githubusercontent.com/whm188400131/VPN/main/Clash/v4Plex.list"}
   Synology: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/synology.mrs"}
