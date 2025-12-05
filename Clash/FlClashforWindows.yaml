@@ -106,7 +106,7 @@ dns:
 # 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
 proxy-groups:
-  - {name: 🤖 ChatGPT, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
+  - {name: 🤖 OpenAI, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
   - {name: 🌍 Bing, type: select, proxies: [直连, 🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡]}
   - {name: 🤖 Copilot, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
   - {name: 🪟 Microsoft, type: select, proxies: [直连, 🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡]}
@@ -124,7 +124,6 @@ proxy-groups:
   - {name: 📹 YouTube, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]} 
   - {name: 📲 Telegram, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]} 
   - {name: 🎥 Netflix, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]} 
-  - {name: 🤖 Gemini, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]} 
   - {name: 🐟 漏网之鱼, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
 
   - {name: 🚀 节点选择, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
@@ -159,17 +158,17 @@ rules:
   - RULE-SET,Nintendo,🎮 Gamestage
   - RULE-SET,Blizzard,🎮 Blizzard
   - RULE-SET,Apple,直连
-  - RULE-SET,Tiktok,🎵 TikTok
+  - RULE-SET,TikTok,🎵 TikTok
   - RULE-SET,Instagram,📸 Instagram
   - RULE-SET,WeChat,直连
   - RULE-SET,Google,🍀 Google
-  - RULE-SET,Github,👨🏿‍💻 GitHub
+  - RULE-SET,GitHub,👨🏿‍💻 GitHub
   - RULE-SET,YouTube,📹 YouTube
   - RULE-SET,Telegram,📲 Telegram
   - RULE-SET,Netflix,🎥 Netflix
   - RULE-SET,apple_ip,直连
   - RULE-SET,google_ip,🍀 Google
-  - RULE-SET,netflix_ip,🎥 NETFLIX
+  - RULE-SET,netflix_ip,🎥 Netflix
   - RULE-SET,telegram_ip,📲 Telegram
   #- RULE-SET,Speedtest,🚀 节点选择
   - RULE-SET,Global,🚀 节点选择
@@ -207,11 +206,11 @@ rule-providers:
   Nintendo: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/nintendo.mrs"}
   Blizzard: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/blizzard.mrs"}
   Apple: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs"}
-  Tiktok: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
+  TikTok: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
   Instagram:  { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/instagram.mrs"}
   WeChat: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/WeChat/WeChat.list"}
   Google: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
-  Github: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
+  GitHub: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
   YouTube:  { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   Telegram: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
   Netflix:  { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
