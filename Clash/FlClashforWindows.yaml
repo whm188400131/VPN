@@ -153,7 +153,10 @@ rules:
   - RULE-SET,v4.Plex,直连
   - RULE-SET,Synology,🗄 Synology
   - RULE-SET,Adobe,🎨 Adobe
-  - RULE-SET,Gamestage,🎮 Gamestage
+  - RULE-SET,Steam,🎮 Gamestage
+  - RULE-SET,Epic,🎮 Gamestage
+  - RULE-SET,Playstation,🎮 Gamestage
+  - RULE-SET,Nintendo,🎮 Gamestage
   - RULE-SET,Blizzard,🎮 Blizzard
   - RULE-SET,Apple,直连
   - RULE-SET,Tiktok,🎵 TikTok
@@ -204,10 +207,10 @@ rule-providers:
   v4.Plex: { <<: *class, url: "https://raw.githubusercontent.com/whm188400131/VPN/main/Clash/v4Plex.list"}
   Synology: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/synology.mrs"}
   Adobe: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/adobe.mrs"}
-  Gamestage: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"}
-  Gamestage: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/epicgames.mrs"}
-  Gamestage: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/playstation.mrs"}
-  Gamestage: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/nintendo.mrs"}
+  Steam: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"}
+  Epic: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/epicgames.mrs"}
+  Playstation: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/playstation.mrs"}
+  Nintendo: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/nintendo.mrs"}
   Blizzard: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/blizzard.mrs"}
   Apple: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs"}
   Tiktok: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs"}
