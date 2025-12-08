@@ -39,68 +39,6 @@ disable-keep-alive: false
 profile:
   store-selected: true
   store-fake-ip: true
-
-# 为防止使用插件朋友遇到面板问题，我注释掉了此模块。
-#external-controller: 0.0.0.0:9090
-#secret: ""
-#external-ui: ui
-#external-ui-name: zashboard
-#external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
-
-# 嗅探（fakeip下其实可以不用嗅探）
-#sniffer:
-#  enable: true
-#  sniff:
-#    HTTP:
-#      ports: [80, 8080-8880]
-#      override-destination: false
-#    TLS:
-#      ports: [443, 8443]
-#    QUIC:
-#      ports: [443, 8443]
-#  skip-domain:
-#    - "Mijia Cloud"
-#    - "+.push.apple.com"
-
-# 入站  
-tun:
-  enable: true
-  # system/gvisor/mixed
-  stack: mixed
-  dns-hijack: ["any:53", "tcp://any:53"]
-  #使用nikki，混入全部不修改的情况，开启接口指定为nikki
-  #device: nikki
-  #使用仅内核自行修改下面三项为true
-  auto-route: false
-  auto-redirect: false
-  auto-detect-interface: false
-
-# DNS模块
-dns:
-  enable: true
-  cache-algorithm: arc
-  listen: 0.0.0.0:7874
-  ipv6: false
-  respect-rules: true
-  enhanced-mode: fake-ip
-  fake-ip-range: 28.0.0.1/8
-  fake-ip-filter-mode: blacklist
-  #fake-ip-filter:
-  #  - rule-set:fakeipfilter_domain
-  default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  direct-nameserver:
-    - 223.5.5.5
-  direct-nameserver-follow-policy: false 
-  proxy-server-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-  nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
  
 # 出站策略，根据自己情况调整每个策略里分组排序，增删都可以，比如把美国自动放到第一个，比如删除香港故转，注意别漏掉表情逗号等。
 # 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
