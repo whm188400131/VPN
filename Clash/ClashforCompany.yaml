@@ -44,12 +44,12 @@ profile:
 # 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
 proxy-groups:
-  - {name: 🌏 Wiki百科, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
-  - {name: 🤖 Openai, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
-  - {name: 🌏 Reddit, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
-  - {name: 📲 Telegram, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]} 
-  - {name: 🌏 v2ex, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]} 
-  - {name: 🐟 漏网之鱼, type: select, proxies: [🌐 手动选择, ♻️ 自动选择, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连]}
+  - {name: 🌏 Wiki百科, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
+  - {name: 🤖 Openai, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
+  - {name: 🌏 Reddit, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
+  - {name: 📲 Telegram, type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
+  - {name: 🌏 v2ex, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
+  - {name: 🐟 漏网之鱼, type: select, proxies: [直连, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🌐 手动选择, type: select, include-all: true}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*BGP)"}
   - {name: 🇺🇲 美国, type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*(美国|美國|US|洛杉矶|西雅图|(?i)States|American))(?=.*BGP)^((?!(香港|台湾|日本|新加坡|韩国|狮城|南朝鲜|SG|JP|KR|HK|TW|台灣|韓國|獅城)).)*$"}
@@ -61,11 +61,12 @@ proxy-groups:
 
 # 规则匹配
 rules:
+  - DOMAIN-SUFFIX,v2ex.com,🌏 v2ex
   - RULE-SET,Wiki,🌏 Wiki百科
   - RULE-SET,Openai,🤖 Openai
   - RULE-SET,Reddit,🌏 Reddit
   - RULE-SET,Telegram,📲 Telegram
-  - DOMAIN-SUFFIX,v2ex.com,🌏 v2ex
+  - RULE-SET,telegram_ip,📲 Telegram
   - MATCH,🐟 漏网之鱼
 
 # 规则集
@@ -78,4 +79,5 @@ rule-providers:
   Wiki: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Wikipedia/Wikipedia.list"}
   Openai: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.mrs"}
   Telegram: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
+  telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
   Reddit: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/reddit.mrs"}
