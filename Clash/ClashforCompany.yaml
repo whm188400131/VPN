@@ -5,7 +5,7 @@
 # 机场订阅
 proxy-providers:
   MEYUN:
-    url: "订阅链接"
+#    url: "订阅链接"
     type: http
     interval: 86400
     health-check:
@@ -47,6 +47,7 @@ proxy-groups:
   - {name: 🌏 Wiki百科, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🤖 Openai, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🌏 Reddit, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
+  - {name: 🎮 Steam, type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 📲 Telegram, type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🌏 v2ex, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🐟 漏网之鱼, type: select, proxies: [直连, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 🌐 手动选择, ♻️ 自动选择]}
@@ -65,6 +66,7 @@ rules:
   - RULE-SET,Wiki,🌏 Wiki百科
   - RULE-SET,Openai,🤖 Openai
   - RULE-SET,Reddit,🌏 Reddit
+  - RULE-SET,Steam,🎮 Steam
   - RULE-SET,Telegram,📲 Telegram
   - RULE-SET,telegram_ip,📲 Telegram
   - MATCH,🐟 漏网之鱼
@@ -78,6 +80,7 @@ rule-anchor:
 rule-providers: 
   Wiki: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Wikipedia/Wikipedia.list"}
   Openai: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.mrs"}
+  Steam: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"}
   Telegram: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
   telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
   Reddit: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/reddit.mrs"}
