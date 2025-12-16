@@ -44,12 +44,12 @@ profile:
 # 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
 proxy-groups:
-  - {name: 🌏 Wiki百科, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
-  - {name: 🤖 Openai, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
-  - {name: 🌏 Reddit, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
+  - {name: 🌏 Wiki百科, type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
+  - {name: 🤖 Openai, type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
+  - {name: 🌏 Reddit, type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🎮 Steam, type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 📲 Telegram, type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
-  - {name: 🌏 v2ex, type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
+  - {name: 🌏 v2ex, type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🐟 漏网之鱼, type: select, proxies: [直连, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🌐 手动选择, type: select, include-all: true}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*BGP)"}
