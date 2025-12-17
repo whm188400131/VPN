@@ -50,6 +50,8 @@ proxy-groups:
   - {name: 🎮 Steam, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png", type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 📲 Telegram, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png", type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🌏 v2ex, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
+  - {name: 📲 Twitter, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
+  - {name: 🌏 Twitch, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitch.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🐟 漏网之鱼, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png", type: select, proxies: [直连, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🌐 手动选择, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static_1.png", type: select, include-all: true}
   - {name: ♻️ 自动选择, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png", type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*BGP)"}
@@ -68,7 +70,11 @@ rules:
   - RULE-SET,Reddit,🌏 Reddit
   - RULE-SET,Steam,🎮 Steam
   - RULE-SET,Telegram,📲 Telegram
-  - RULE-SET,telegram_ip,📲 Telegram
+  - RULE-SET,Twitter,📲 Twitter
+  - RULE-SET,Twitch,🌏 Twitch
+  
+  - RULE-SET,Telegram_ip,📲 Telegram
+  - RULE-SET,Twitter_ip,📲 Twitter
   - MATCH,🐟 漏网之鱼
 
 # 规则集
@@ -79,8 +85,13 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
   Wiki: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Wikipedia/Wikipedia.list"}
+  
   Openai: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.mrs"}
   Steam: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"}
   Telegram: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
-  telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
   Reddit: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/reddit.mrs"}
+  Twitter: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs"}
+  Twitch: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitch.mrs"}
+  
+  Telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
+  Twitter_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/twitter.mrs"}
