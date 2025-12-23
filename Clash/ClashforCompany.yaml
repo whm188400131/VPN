@@ -47,6 +47,7 @@ proxy-groups:
   - {name: 🌏 Wiki百科, icon: "https://raw.githubusercontent.com/whm188400131/VPN/main/Clash/icon/Wikipedia.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🤖 Openai, icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/chatgpt(white1).png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🤖 Gemini, icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/gemini.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
+  - {name: 🎨 Pinterest, icon: "https://raw.githubusercontent.com/whm188400131/VPN/main/Clash/icon/Pinterest.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🌏 Reddit, icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/reddit(1).png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🎮 Steam, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png", type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 📲 Telegram, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png", type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
@@ -71,6 +72,7 @@ rules:
   - RULE-SET,Openai,🤖 Openai
   - RULE-SET,Gemini,🤖 Gemini
   - RULE-SET,Reddit,🌏 Reddit
+  - RULE-SET,Pinterest,🎨 Pinterest
   - RULE-SET,Steam,🎮 Steam
   - RULE-SET,Telegram,📲 Telegram
   - RULE-SET,Twitter,📲 Twitter
@@ -94,6 +96,7 @@ rule-providers:
   Steam: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"}
   Telegram: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
   Reddit: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/reddit.mrs"}
+  Pinterest: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/pinterest.mrs"}
   Twitter: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs"}
   Twitch: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitch.mrs"}
   
