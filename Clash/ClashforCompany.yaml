@@ -53,6 +53,7 @@ proxy-groups:
   - {name: 📲 Telegram, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png", type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🌏 v2ex, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 📲 Twitter, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
+  - {name: 🎨 Instagram, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png", type: select, proxies: [🇺🇲 美国, 🇯🇵 日本, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🌏 Twitch, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitch.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🐟 漏网之鱼, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png", type: select, proxies: [直连, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🌐 手动选择, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static_1.png", type: select, include-all: true}
@@ -76,6 +77,7 @@ rules:
   - RULE-SET,Steam,🎮 Steam
   - RULE-SET,Telegram,📲 Telegram
   - RULE-SET,Twitter,📲 Twitter
+  - RULE-SET,Instagram,🎨 Instagram
   - RULE-SET,Twitch,🌏 Twitch
   
   - RULE-SET,Telegram_ip,📲 Telegram
@@ -98,6 +100,7 @@ rule-providers:
   Reddit: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/reddit.mrs"}
   Pinterest: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/pinterest.mrs"}
   Twitter: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitter.mrs"}
+  Instagram: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/instagram.mrs"}
   Twitch: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/twitch.mrs"}
   
   Telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
