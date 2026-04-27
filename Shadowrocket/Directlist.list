@@ -1,10 +1,16 @@
+# 机场
 DOMAIN-SUFFIX,yyme.me
+DOMAIN-KEYWORD,yyme
+# 日语
 DOMAIN-SUFFIX,mojidict.com
 DOMAIN-SUFFIX,u-tokyo.ac.jp
 DOMAIN-SUFFIX,kakijun.jp
-DOMAIN-KEYWORD,yyme
+DOMAIN-SUFFIX,kakijun.jp
 DOMAIN-KEYWORD,mojidict
 DOMAIN-KEYWORD,u-tokyo
 DOMAIN-KEYWORD,u-tokyo.ac
 DOMAIN-KEYWORD,kakijun
+# 异星工厂
 DOMAIN-KEYWORD,factoriolab
+# Terminus+
+DOMAIN-SUFFIX,zdz.best
