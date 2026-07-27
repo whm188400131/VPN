@@ -71,6 +71,7 @@ rules:
   - DOMAIN-SUFFIX,wipo.int,🌏 WIPO
   - DOMAIN-SUFFIX,v2ex.com,🌏 v2ex
   - DOMAIN-KEYWORD,notebooklm,🤖 Gemini
+  - DOMAIN-KEYWORD,notebook.google,🤖 Gemini
   - RULE-SET,Wiki,🌏 Wiki百科
   - RULE-SET,Openai,🤖 Openai
   - RULE-SET,Gemini,🤖 Gemini
