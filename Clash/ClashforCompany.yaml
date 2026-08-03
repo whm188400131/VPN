@@ -72,6 +72,7 @@ rules:
   - DOMAIN-SUFFIX,v2ex.com,🌏 v2ex
   - DOMAIN-KEYWORD,notebooklm,🤖 Gemini
   - DOMAIN-KEYWORD,notebook.google,🤖 Gemini
+  - DOMAIN-KEYWORD,reqos.alphatvapp.top,🌐 手动选择
   - RULE-SET,Wiki,🌏 Wiki百科
   - RULE-SET,Openai,🤖 Openai
   - RULE-SET,Gemini,🤖 Gemini
