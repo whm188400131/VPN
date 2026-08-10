@@ -1,9 +1,0 @@
-# NAME: AppleAI
-# AUTHOR: whm
-# UPDATED: 2026-04-01
-# DOMAIN-SUFFIX: 2
-# TOTAL: 2
-DOMAIN-SUFFIX,apple-relay.apple.com
-DOMAIN-SUFFIX,apple-relay.cloudflare.com
-DOMAIN-SUFFIX,apple-relay.fastly-edge.com
-DOMAIN-SUFFIX,cp4.cloudflare.com
