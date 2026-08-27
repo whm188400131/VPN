@@ -52,7 +52,6 @@ proxy-groups:
   - {name: 🌏 Reddit, icon: "https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/reddit(1).png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🎮 Steam, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png", type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 📲 Telegram, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png", type: select, proxies: [🇭🇰 香港, 🇺🇲 美国, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
-  - {name: 🌏 v2ex, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 📲 Twitter, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🎨 Instagram, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png", type: select, proxies: [🇺🇲 美国, 🇯🇵 日本, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🌏 Twitch, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitch.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
@@ -70,9 +69,7 @@ proxy-groups:
 rules:
   - DOMAIN-SUFFIX,wipo.int,🌏 WIPO
   - DOMAIN-SUFFIX,v2ex.com,🌏 v2ex
-  - DOMAIN-KEYWORD,notebooklm,🤖 Gemini
-  - DOMAIN-KEYWORD,notebook.google,🤖 Gemini
-  - DOMAIN-KEYWORD,reqos.alphatvapp.top,🌐 手动选择
+  - RULE-SET,Proxylist,🌐 手动选择
   - RULE-SET,Wiki,🌏 Wiki百科
   - RULE-SET,Openai,🤖 Openai
   - RULE-SET,Gemini,🤖 Gemini
@@ -95,8 +92,9 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
-  Wiki: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Wikipedia/Wikipedia.list"}
+  Proxylist: { <<: *class, url: "https://raw.githubusercontent.com/whm188400131/VPN/main/Shadowrocket/Proxylist.list"}
   
+  Wiki: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/wikimedia.mrs"}
   Openai: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.mrs"}
   Gemini: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google-gemini.mrs"}
   Steam: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/steam.mrs"}
