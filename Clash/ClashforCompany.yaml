@@ -68,7 +68,6 @@ proxy-groups:
 # 规则匹配
 rules:
   - DOMAIN-SUFFIX,wipo.int,🌏 WIPO
-  - DOMAIN-SUFFIX,v2ex.com,🌏 v2ex
   - RULE-SET,Proxylist,🌐 手动选择
   - RULE-SET,Wiki,🌏 Wiki百科
   - RULE-SET,Openai,🤖 Openai
