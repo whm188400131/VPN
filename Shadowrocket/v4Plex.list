@@ -1,10 +1,10 @@
 #Plex走代理，v4Plex走直连
 
-DST-PORT,32400,DIRECT
+DST-PORT,32400
 
 DOMAIN-SUFFIX,v4.plex.tv
 DOMAIN-SUFFIX,plex.direct
-DOMAIN-SUFFIX,amazonaws.com
+#DOMAIN-SUFFIX,amazonaws.com
 
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,plexapp.com
