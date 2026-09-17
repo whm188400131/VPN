@@ -19,26 +19,16 @@ proxies:
   - {name: 直连, type: direct}
 
 # 全局配置 
-port: 7890
-socks-port: 7891
-redir-port: 7892
 mixed-port: 7893
-tproxy-port: 7895
-allow-lan: true
-bind-address: "*"
+allow-lan: false
 ipv6: false
 unified-delay: true
 tcp-concurrent: true
 log-level: warning
 mode: rule
-find-process-mode: 'off'
-global-client-fingerprint: chrome
-keep-alive-idle: 600
-keep-alive-interval: 15
-disable-keep-alive: false
+find-process-mode: strict
 profile:
   store-selected: true
-  store-fake-ip: true
  
 # 出站策略，根据自己情况调整每个策略里分组排序，增删都可以，比如把美国自动放到第一个，比如删除香港故转，注意别漏掉表情逗号等。
 # 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
@@ -57,7 +47,7 @@ proxy-groups:
   - {name: 🌏 Twitch, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitch.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🐟 漏网之鱼, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png", type: select, proxies: [直连, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 🌐 手动选择, ♻️ 自动选择]}
   - {name: 🌐 手动选择, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static_1.png", type: select, include-all: true}
-  - {name: ♻️ 自动选择, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png", type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*BGP)"}
+  - {name: ♻️ 自动选择, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png", type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "^(?!直连$).+"}
   - {name: 🇺🇲 美国, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png", type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*(美|US|洛杉矶|西雅图|(?i)(States|American)))^((?!(港|台|日本|新加坡|韩|韓|狮城|獅城|SG|JP|KR|HK|TW)).)*$"}
   - {name: 🇭🇰 香港, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png", type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*(港|HK|(?i)(Hong|HongKong)))^((?!(台|日本|新加坡|美|韩|韓|狮城|獅城|US|SG|JP|KR|TW)).)*$"}
   - {name: 🇯🇵 日本, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png", type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*(日本|JP|(?i)Japan))^((?!(港|台|新加坡|美国|韩|韓|狮城|獅城|US|SG|KR|HK|TW|软银|原生)).)*$"}
@@ -80,8 +70,8 @@ rules:
   - RULE-SET,Instagram,🎨 Instagram
   - RULE-SET,Twitch,🌏 Twitch
   
-  - RULE-SET,Telegram_ip,📲 Telegram
-  - RULE-SET,Twitter_ip,📲 Twitter
+  - RULE-SET,Telegram_ip,📲 Telegram,no-resolve
+  - RULE-SET,Twitter_ip,📲 Twitter,no-resolve
   - MATCH,🐟 漏网之鱼
 
 # 规则集
