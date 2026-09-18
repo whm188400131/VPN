@@ -1,6 +1,10 @@
 #!name=Google搜索引擎防跳转
 #!desc=包括URL重写和MITM模块
 
+[Rule]
+# 拒绝google.cn的QUIC
+AND,((DOMAIN-SUFFIX,google.cn),(PROTOCOL,UDP),(DEST-PORT,443)),REJECT
+
 [URL Rewrite]
 # Google搜索引擎防跳转的重写。
 ^https?://(www.)?g.cn https://www.google.com 302
