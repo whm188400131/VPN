@@ -47,7 +47,7 @@ proxy-groups:
   - {name: 🎨 Instagram, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Instagram.png", type: select, proxies: [🇺🇲 美国, 🇯🇵 日本, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🌏 Twitch, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitch.png", type: select, proxies: [🇯🇵 日本, 🇺🇲 美国, 🇭🇰 香港, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 直连, 🌐 手动选择, ♻️ 自动选择]} 
   - {name: 🐟 漏网之鱼, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png", type: select, proxies: [直连, 🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡, 🌐 手动选择, ♻️ 自动选择]}
-  - {name: 🌐 手动选择, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static_1.png", type: select, include-all: true}
+  - {name: 🌐 手动选择, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Static_1.png", type: select, proxies: [🇺🇲 美国, 🇭🇰 香港, 🇯🇵 日本, 🇨🇳 台湾, 🇰🇷 韩国, 🇸🇬 新加坡], include-all: true}
   - {name: ♻️ 自动选择, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png", type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "^(?!直连$).+"}
   - {name: 🇺🇲 美国, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png", type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*(美|US|洛杉矶|西雅图|(?i)(States|American)))^((?!(港|台|日本|新加坡|韩|韓|狮城|獅城|SG|JP|KR|HK|TW)).)*$"}
   - {name: 🇭🇰 香港, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png", type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*(港|HK|(?i)(Hong|HongKong)))^((?!(台|日本|新加坡|美|韩|韓|狮城|獅城|US|SG|JP|KR|TW)).)*$"}
@@ -59,6 +59,7 @@ proxy-groups:
 # 规则匹配
 rules:
   - DOMAIN-SUFFIX,wipo.int,🌏 WIPO
+  - DOMAIN-KEYWORD,chinadrugtrials,🌐 手动选择
   - RULE-SET,Proxylist,🌐 手动选择
   - RULE-SET,Wiki,🌏 Wiki百科
   - RULE-SET,Openai,🤖 Openai
